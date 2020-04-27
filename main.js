@@ -48,16 +48,24 @@ drawScreen(screen);
 document.onkeydown = function(e) {
     switch (e.keyCode) {
         case 37: //left arrow
-            player.x -= 1;
+            if (player.x > 0){
+                player.x -= 1;
+            }
             break;
         case 38: //up arrow
-            player.y -= 1;
+            if (player.y > 0){
+                player.y -= 1;
+            }
             break;
         case 39: //right arrow
-            player.x += 1;
+            if (player.x < screen.width - 1){
+                player.x += 1;
+            }
             break;
         case 40: //down arrow
+        if (player.y < screen.height - 1){
             player.y += 1;
+        }
             break;
     }
     drawScreen(screen);
