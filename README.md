@@ -1,1 +1,1 @@
-# banditquest.github.io
+# banditquest
